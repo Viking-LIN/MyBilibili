@@ -1,0 +1,67 @@
+
+header{
+    width:100%;
+    display: flex;
+   justify-content: center;
+    overflow: hidden;
+  }
+  .back{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 42px;
+    width:100%;
+    color: black;
+    background-image: url('../../../../asset/images/background.png');
+    background-position: center -10px;
+    background-repeat: no-repeat;
+    filter: blur(4px);
+    box-shadow: 0 1px 2px rgba(0,0,0,1);
+  
+  }
+  .topbar{
+    width: 100%;
+    height: 100%;
+     background: white;
+     opacity: 0.5;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  border-bottom:black 1px;
+  
+  }
+  .logo{
+    position: absolute;
+    top:65px;
+    left: 220px;
+  }
+  .top-left{
+    position: absolute;
+    display: flex;
+    left: 200px;
+    top:0px;
+    li{
+        padding: 12px;
+        cursor: pointer;
+        font-size: 10px;
+        &:hover{
+            background: white;
+            filter: opacity(.8);
+        }
+      }
+      
+  }
+  .top-right{
+    position: absolute;
+    display: flex;
+    left: 60%;
+    top:0px;
+    li{
+        padding: 12px;
+        cursor: pointer;
+        font-size: 10px;
+        &:hover{
+            background: white;
+            filter: opacity(.8);
+        }
+      }
+      
+  }

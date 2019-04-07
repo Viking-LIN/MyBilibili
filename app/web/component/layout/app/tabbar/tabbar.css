@@ -12,6 +12,9 @@
     justify-content: space-between;
     text-align: center;
 }
+#tabbar ul li{
+    cursor: pointer;
+}
 #tabbar ul li.active{
     color:pink;
 }
