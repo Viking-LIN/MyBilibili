@@ -5,5 +5,6 @@
   npm install 
   安装轮播图依赖
   npm install swiper
+
 2.运行 
     npm run dev
