@@ -15,6 +15,7 @@ export default function createStore(initState = {}) {
     swiperList:[],
     comicList: [],
     recommand:[],
+    comment:[],
     video: {},
     ...initState
   };

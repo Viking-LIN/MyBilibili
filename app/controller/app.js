@@ -26,8 +26,14 @@ class AppController extends Controller {
     this.ctx.body = detail;
   }
   async recommand() {
-    var recommand = await this.service.video.getRecommand();
+    const id = Number(this.ctx.params.id);
+    var recommand = await this.service.video.getRecommand(id);
     this.ctx.body = recommand;
+  }
+  async comment() {
+    const id = Number(this.ctx.params.id);
+    var Comment = await this.service.video.getComment(id);
+    this.ctx.body = Comment;
   }
 }
 
