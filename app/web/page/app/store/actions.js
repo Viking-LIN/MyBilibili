@@ -62,9 +62,9 @@ const actions = {
     return Promise.resolve();
    },
 
-   FETCH_RECOMMAND: ({ commit, dispatch, state }) => {
-    if (!state.recommand.length) {
-      return axios.get(`${host}/api/recommand`)
+   FETCH_RECOMMAND: ({ commit, dispatch, state }, { id }) => {
+    if (state.video.id !== Number(id)) {
+      return axios.get(`${host}/api/recommand/${id}`)
         .then(response => {
    
           const data = response.data.othersList;
@@ -73,7 +73,20 @@ const actions = {
         });
     }
     return Promise.resolve();
+  },
+  FETCH_COMMENT: ({ commit, dispatch, state }, { id }) => {
+    if (state.video.id !== Number(id)) {
+      return axios.get(`${host}/api/comment/${id}`)
+        .then(response => {
+  
+          const data = response.data.commentData;
+          commit(Type.SET_COMMENT, data);
+          return data;
+        });
+    }
+    return Promise.resolve();
   }
+
 
 };
 

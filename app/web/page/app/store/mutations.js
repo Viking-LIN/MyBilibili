@@ -5,7 +5,8 @@ import {
   SET_SWIPER_LIST,
   SET_COMIC_LIST,
   SET_VIDEO_DETAIL ,
-  SET_RECOMMAND
+  SET_RECOMMAND,
+  SET_COMMENT
 } from './mutation-type';
 
 const mutations = {
@@ -23,6 +24,9 @@ const mutations = {
   },
   [SET_RECOMMAND](state, items) {
     state.recommand = items;
+  },
+  [SET_COMMENT](state, items) {
+    state.comment = items;
   }
 };
 export default mutations;

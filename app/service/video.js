@@ -22,8 +22,17 @@ class VideoService extends Service {
         var data=JSON.parse(response.data);  
         return data.data;
       }
-      async getRecommand() {
-        var api ="https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/othersList";
+      async getRecommand(id) {
+        var api ="https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/othersList?id="+id;
+
+        var response=await this.ctx.curl(api);
+
+        var data=JSON.parse(response.data);  
+
+        return data.data;
+      }
+      async getComment(id) {
+        var api ="https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/commentsList?id="+id;
 
         var response=await this.ctx.curl(api);
 

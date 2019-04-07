@@ -16,8 +16,6 @@ const getters = {
                     return returnComic.sort(getters.compare(sortIndex,sortType))
                 else
                     return returnComic
-                
-           
         }
 
     },
