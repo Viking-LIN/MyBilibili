@@ -24,7 +24,7 @@
             <div v-for="item in videoList" :key="item.index" >
               <division v-if="item.id%6==0" :index="item.id/6"></division>
              <div  v-else class='video-item'>
-            <router-link tag="a" :to="'detail/detail/'+item.id"  >
+            <router-link tag="a" :to="'detail/'+item.id"  >
               <div class='video-img'>
                   <img class="video-img-image" :src="item.imgSrc.split('@')[0]"> 
                   <div class="video-info2">
