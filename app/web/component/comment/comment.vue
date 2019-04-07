@@ -1,5 +1,9 @@
 <template>
     <div class="comment-div">
+            <div class="summitdiv">
+              <textarea class="textarea" cols="80" name="msg" rows="5" v-model="text" ></textarea>
+              <button class="summit" @click="summitComment()">发表评论</button>
+          </div>
           <div class="comment-sum">评论：{{comment.commentTotalCount}}</div>
           <div class="comment-content">
               <li class="comment-item " v-for="item in comment.commentList" :key="item.index">
@@ -21,11 +25,20 @@ import Vue from 'vue';
 import Vuex from 'vuex';
   export default{
     name:'comment',
-
+    data:function(){
+        return { 'text':'' }
+    },
      computed: {
       ...Vuex.mapState({
         comment:"comment"
       })
+    },
+    methods:{
+        summitComment(){
+            var textS = this.text;
+            this.$store.dispatch('SUMMIT_COMMENT',{textS});
+            this.text='';
+        }
     },
     preFetch({ state, dispatch, commit }) {
       const { id } = state.route.params;

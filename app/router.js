@@ -6,5 +6,6 @@ module.exports = app => {
   app.get('/api/recommand/:id', app.controller.app.recommand);
   app.get('/api/detail/:id', app.controller.app.detail);
   app.get('/api/comment/:id', app.controller.app.comment);
+  app.get('/api/summitcomment/:text', app.controller.app.summitcomment);
   app.get('/*', app.controller.app.index);
 };

@@ -85,8 +85,11 @@ const actions = {
         });
     }
     return Promise.resolve();
-  }
-
+  },
+  SUMMIT_COMMENT: ({ commit, dispatch, state }, { textS }) => {
+    axios.get(`${host}/api/summitcomment/${textS}`)
+    return Promise.resolve();
+  },
 
 };
 

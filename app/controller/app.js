@@ -35,6 +35,11 @@ class AppController extends Controller {
     var Comment = await this.service.video.getComment(id);
     this.ctx.body = Comment;
   }
+  async summitcomment() {
+    const text = this.ctx.params.text;
+    console.log("==================收到评论： "+text+"============================");
+    this.ctx.status = 204;
+  }
 }
 
 module.exports = AppController;
